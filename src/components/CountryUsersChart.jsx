@@ -4,7 +4,7 @@ import ReactPaginate from "react-paginate";
 
 function CountryUsersChart(data) {
   const usersperYearCountry = data.data;
-  const itemsPerPage = 10; // Número de países a mostrar por página
+  const itemsPerPage = 10;
 
   const [currentPage, setCurrentPage] = useState(0);
 

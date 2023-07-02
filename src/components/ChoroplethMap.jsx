@@ -1,6 +1,5 @@
 import { ResponsiveChoropleth } from "@nivo/geo";
 import worldCountries from "../utils/world_countries.json";
-import datas from "../utils/datita.js";
 
 function ChoroplethMap(data) {
     const mapData = data.data;
@@ -11,11 +10,6 @@ function ChoroplethMap(data) {
      id: item.id,
      value: item.value,
    }));
-
-        console.log("data transformedData", transformedData);
-        console.log("data datas", datas);
-
-
 
   return (
     <div className="chart-bar-container">

@@ -76,8 +76,6 @@ export const getInternetUsersAndYear = async () => {
       smallArrays.push(chunk);
     }
 
-    //console.log('smallArrays', smallArrays);
-
     return internetUsersYear;
   } catch (error) {
     console.error("Error al obtener los datos:", error);
@@ -89,7 +87,6 @@ export const topCountries = async () => {
   const startYear = 1990;
   const endYear = 2020;
   const countries = await getCountries();
-  //const countries = countriesResponse.Countries;
   const internetUsersYear = [];
 
   try {
@@ -115,12 +112,10 @@ export const topCountries = async () => {
         }
       });
 
-      // Ordenar los países por número de usuarios de Internet de forma descendente
       yearData.countries.sort(
         (a, b) => b.internet_users_number - a.internet_users_number
       );
 
-      // Tomar solo los 10 países con más usuarios de Internet
       yearData.countries = yearData.countries.slice(0, 10);
 
       if (yearData.countries.length > 0) {
@@ -139,25 +134,18 @@ export const mapCountriesPerYear = async () => {
   const response = await axios.get("/year/2020");
   const data = response.data.Data;
 
-  // Obtén los pares clave-valor del objeto "data"
   const formattedData = Object.keys(data).map((country) => {
-    // Obtén la abreviatura del país utilizando el archivo "abreviaturas.json"
     const countryCode = Object.keys(abbreviations).find(
       (key) => abbreviations[key] === country
     );
 
-    //const countryCode = abbreviations[country.toUpperCase()];
-
-    // Obtén el número de usuarios de internet del país
     const internetUsersNumber = data[country].internet_users_number;
 
-    // Retorna el objeto con el formato deseado
     return {
       id: countryCode,
       value: internetUsersNumber,
     };
   });
-  console.log("formattedData", formattedData);
   return formattedData;
 };
 

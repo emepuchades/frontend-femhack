@@ -8,12 +8,11 @@ import {
 } from "./utils/service.api.js";
 import InternetUsersChart from "./components/InternetUsersChart";
 import HeatmapChart from "./components/HeatmapChart";
-//import TopCountries from "./components/TopCountries";
 import ChoroplethMap from "./components/ChoroplethMap";
-
-//import data from "./utils/data.json"
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
+  const [loading, setLoading] = useState(false);
   const [internetUsers, setInternetUsers] = useState([]);
   const [usersCountriesYear, setUsersCountriesYear] = useState([]);
   const [topCountriesData, setTopCountriesData] = useState([]);
@@ -30,19 +29,23 @@ function App() {
       setTopCountriesData(data);
     });
     mapCountriesPerYear().then((data) => {
-      {
-        console.log("fucntion maps", data);
-      }
-
       setMapCountries(data);
     });
+
+    const timeoutId = setTimeout(() => {
+        setLoading(true);
+    }, 2000);
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
   }, []);
 
   return (
     <>
-      {console.log("mapCountries", mapCountries)}
-      <h2>Historia de Internet</h2>
-      {internetUsers.length != 0 &&
+   <Navbar />
+    {loading ? 
+      internetUsers.length != 0 &&
       usersCountriesYear.length != 0 &&
       topCountriesData.length != 0 &&
       mapCountries !== undefined ? (
@@ -51,7 +54,10 @@ function App() {
           <HeatmapChart data={usersCountriesYear} />
           <ChoroplethMap data={mapCountries} />
         </>
-      ) : null}
+      ) : null
+       : 
+      <h1>Loading</h1>
+      }
     </>
   );
 }

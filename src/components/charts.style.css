@@ -1,4 +1,48 @@
+.internet-user-container {
+  display: flex;
+  align-items: center;
+}
+
+.banner-container {
+  width: 30vw;
+  padding: 20px;
+  animation: slideFromLeft 1s forwards;
+}
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.banner-container h1 {
+  margin-bottom: 1rem;
+  font-size: 2.75rem;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.025em;
+  color: #333333;
+}
+
+.banner-container .title {
+  text-decoration: underline;
+  color: #046fca;
+}
+
+.banner-container .subtitle {
+  color: #7f7f7f;
+  font-size: 20px;
+  font-weight: 600;
+}
+
 .chart-bar-container {
-    height:70vh; 
-    width: 90vw;
+  height: 70vh;
+  width: 76vw;
+}
+
+.title-heatmapchart {
+  padding: 20px;
+  animation: slideFromLeft 1s forwards;
 }
