@@ -1,4 +1,3 @@
-import React from 'react'
 import { ResponsiveChoropleth } from "@nivo/geo";
 import worldCountries from "../utils/world_countries.json";
 import datas from "../utils/datita.js";

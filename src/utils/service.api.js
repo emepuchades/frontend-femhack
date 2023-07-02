@@ -30,7 +30,7 @@ export const getInternetUsers = async () => {
   }
 };
 
-export const getInternetUsersAndYear = async (pageNumber, pageSize) => {
+export const getInternetUsersAndYear = async () => {
   const startYear = 2000;
   const endYear = 2020;
   const countries = await getCountries();
