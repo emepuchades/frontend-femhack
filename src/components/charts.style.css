@@ -46,3 +46,15 @@
   padding: 20px;
   animation: slideFromLeft 1s forwards;
 }
+
+
+
+
+.title-choroplethMap {
+  padding: 20px;
+}
+
+.choroplethMap-container {
+  width: 100vw;
+  height: 70vh;
+}
