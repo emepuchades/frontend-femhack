@@ -11,10 +11,14 @@
   },
   "dependencies": {
     "@nivo/bar": "^0.83.0",
+    "@nivo/geo": "^0.83.0",
     "@nivo/heatmap": "^0.83.0",
+    "@nivo/pie": "^0.83.0",
+    "@nivo/scatterplot": "^0.83.0",
     "axios": "^1.4.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-paginate": "^8.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.37",
