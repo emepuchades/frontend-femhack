@@ -1,4 +1,4 @@
-<h1>
+ <h1>
  Frontend FemHack Challenge
 </h1>
 <h1 align="center">
@@ -20,6 +20,7 @@ This ReactJS application was created using  [Vite](https://vitejs.dev/), a fast 
 
 Make sure you have the Node installed on your machine:
 - Node.js: [Download and install Node.js](https://nodejs.org)
+- Backend: [Download and install](https://github.com/nuwe-reports/femhack-II-frontend-challenge) .In this case, I used Docker. You need to have Docker running in order to make requests to localhost:8080
 
 ### Installation steps
 
@@ -95,6 +96,15 @@ Libraries used:
 5. Add an icon for the website.
 
 ## Results:
+<p>First chart </p>
 
-   
-  
+![principal1_AdobeExpress](https://github.com/emepuchades/frontend-femhack/assets/100128850/bda52b4a-953e-4876-8e94-92e371cc8ef4)
+
+<p>Second chart</p>
+
+![segunda_AdobeExpress](https://github.com/emepuchades/frontend-femhack/assets/100128850/aaaac8b2-c0de-4c02-a5a4-aceb0bad54fe)
+
+<p>Fourth chart</p>
+
+ ![mapa](https://github.com/emepuchades/frontend-femhack/assets/100128850/bd9d1394-dd4e-4374-8996-ff68c9b62916)
+
