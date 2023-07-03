@@ -76,30 +76,6 @@ function InternetUsersChart(data) {
           labelSkipWidth={12}
           labelSkipHeight={12}
           labelTextColor={{ from: "color", modifiers: [["darker", 1.6]] }}
-          legends={[
-            {
-              dataFrom: "keys",
-              anchor: "bottom",
-              direction: "column",
-              justify: false,
-              translateX: 120,
-              translateY: 0,
-              itemsSpacing: 2,
-              itemWidth: 5,
-              itemHeight: 5,
-              itemDirection: "left-to-right",
-              itemOpacity: 0.85,
-              symbolSize: 20,
-              effects: [
-                {
-                  on: "hover",
-                  style: {
-                    itemOpacity: 1,
-                  },
-                },
-              ],
-            },
-          ]}
           animate={true}
           motionStiffness={90}
           motionDamping={15}

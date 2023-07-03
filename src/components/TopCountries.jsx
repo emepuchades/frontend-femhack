@@ -6,6 +6,8 @@ function TopCountries(data) {
   const [selectedYear, setSelectedYear] = useState(0);
   const [datita, setDatita] = useState(data.data[selectedYear].countries);
 
+  console.log('datita', datita)
+
   const handleChange = (event) => {
         console.log("event", event.target.value);
 
@@ -68,18 +70,18 @@ function TopCountries(data) {
             }}
             legends={[
               {
-                anchor: "bottom",
-                direction: "row",
+                anchor: "right",
+                direction: "column",
                 justify: false,
-                translateX: 0,
-                translateY: 56,
-                itemsSpacing: 0,
-                itemWidth: 100,
-                itemHeight: 18,
+                translateX: 14,
+                translateY: -88,
+                itemsSpacing: 1,
+                itemWidth: 82,
+                itemHeight: 28,
                 itemTextColor: "#999",
                 itemDirection: "left-to-right",
                 itemOpacity: 1,
-                symbolSize: 18,
+                symbolSize: 13,
                 symbolShape: "circle",
                 effects: [
                   {

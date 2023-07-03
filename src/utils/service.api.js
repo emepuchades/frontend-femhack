@@ -89,6 +89,7 @@ export const topCountries = async () => {
   const countries = await getCountries();
   const internetUsersYear = [];
 
+
   try {
     for (let year = startYear; year <= endYear; year++) {
       const response = await axios.get(`/year/${year}`);
@@ -96,18 +97,17 @@ export const topCountries = async () => {
         year: year,
         countries: [],
       };
-
       const responseData = response.data.Data;
 
       countries.forEach((country) => {
-        const countryData = responseData[country];
 
+        const countryData = responseData[country];
         if (countryData && countryData.internet_users_number > 0) {
           yearData.countries.push({
-            id: year,
+            id: country,
             label: country,
             value: countryData.internet_users_number,
-            color: "hsl(149, 70%, 50%)",
+            color: "hsl(50, 70%, 50%)",
           });
         }
       });
@@ -123,6 +123,7 @@ export const topCountries = async () => {
       }
     }
 
+      console.log('internetUsersYear', internetUsersYear)
     return internetUsersYear;
   } catch (error) {
     console.error("Error al obtener los datos:", error);

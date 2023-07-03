@@ -14,13 +14,7 @@ function Footer() {
           </a>
         </p>
         <p className="list">
-          <a
-            href="mailto:mariapuchadesortega@gmail.com"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Email
-          </a>
+            Emepuchades
         </p>
         <p className="list">
           <a>FEMHACK</a>

@@ -14,7 +14,7 @@ function ChoroplethMap(data) {
   return (
     <>
       <h1 className="title-choroplethMap">
-        Mapa donde se muestran los usuarios en 2022
+        Map displaying users in 2022
       </h1>
       <div className="choroplethMap-container">
         <ResponsiveChoropleth
