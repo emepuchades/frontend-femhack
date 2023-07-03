@@ -6,18 +6,12 @@ function TopCountries(data) {
   const [selectedYear, setSelectedYear] = useState(0);
   const [datita, setDatita] = useState(data.data[selectedYear].countries);
 
-  console.log('datita', datita)
-
   const handleChange = (event) => {
-        console.log("event", event.target.value);
-
       const selectedOption = event.target.value;
       setSelectedYear(selectedOption);
   };
 
   useEffect(() => {
-      console.log("setDatita", datita);
-
       setDatita(data.data[selectedYear].countries);
   }, [selectedYear]);
 

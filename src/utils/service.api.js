@@ -123,7 +123,6 @@ export const topCountries = async () => {
       }
     }
 
-      console.log('internetUsersYear', internetUsersYear)
     return internetUsersYear;
   } catch (error) {
     console.error("Error al obtener los datos:", error);
