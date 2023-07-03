@@ -1,0 +1,17 @@
+.footer {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    text-align: center;
+    background-color: #F2F2F2;
+    justify-content: center;
+}
+
+.list {
+    margin: 20px;
+}
+
+a {
+    color: #111111;
+    text-decoration: none;
+}

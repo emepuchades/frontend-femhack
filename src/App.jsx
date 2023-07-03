@@ -10,6 +10,9 @@ import InternetUsersChart from "./components/InternetUsersChart";
 import HeatmapChart from "./components/HeatmapChart";
 import ChoroplethMap from "./components/ChoroplethMap";
 import Navbar from "./components/Navbar/Navbar";
+import TopCountries from "./components/TopCountries";
+import imageLoading from "./assets/web_ evolutio_logo.png"
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -43,21 +46,30 @@ function App() {
 
   return (
     <>
-   <Navbar />
-    {loading ? 
-      internetUsers.length != 0 &&
-      usersCountriesYear.length != 0 &&
-      topCountriesData.length != 0 &&
-      mapCountries !== undefined ? (
-        <>
-          <InternetUsersChart data={internetUsers} />
-          <HeatmapChart data={usersCountriesYear} />
-          <ChoroplethMap data={mapCountries} />
-        </>
-      ) : null
-       : 
-      <h1>Loading</h1>
-      }
+      {loading ? (
+        internetUsers.length != 0 &&
+        usersCountriesYear.length != 0 &&
+        topCountriesData.length != 0 &&
+        mapCountries !== undefined ? (
+          <>
+            <Navbar />
+            <InternetUsersChart data={internetUsers} />
+            <HeatmapChart data={usersCountriesYear} />
+            <TopCountries data={topCountriesData} />
+            <ChoroplethMap data={mapCountries} />
+            <Footer />
+          </>
+        ) : null
+      ) : (
+        <div className="loading-container">
+          <img
+            src={imageLoading}
+            alt="imagen-loading"
+            className="image-loading"
+          />
+          <h1>Loading</h1>
+        </div>
+      )}
     </>
   );
 }
