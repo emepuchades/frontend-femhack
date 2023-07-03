@@ -6,10 +6,6 @@ function Navbar() {
     <div className="navbar">
       <img className="logo" src={Logo} alt="Web Evolution" />
       <h3>Web Evolution</h3>
-      <div className="right-container">
-        <p>emepuchades -github</p>
-        <p>FEMHACK</p>
-      </div>
     </div>
   );
 }

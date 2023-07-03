@@ -61,13 +61,9 @@ const countriesYearUsers = data.data
         </div>
         <div className="banner-container">
           <h3>
-            30 years of <span className="title">internet evolution</span> and
-            the number of users each year.
+            In this graph, you can select the year and the country, and it will
+            display the number of users they had.
           </h3>
-          <p className="subtitle">
-            Discover which countries have the most internet-connected users and
-            which year has seen the highest internet usage.
-          </p>
         </div>
       </div>
     </>
